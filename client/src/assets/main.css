@@ -1,0 +1,95 @@
+@import './base.css';
+
+@font-face {
+  font-family: 'Inter';
+  src: url(~@/fonts/Inter-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  color: var(--White, #ECECEC);
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a {
+  color: #ECECEC;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  
+}
+
+hr {
+  border: none;
+  background-color: var(--Element, rgba(255, 255, 255, 0.10));
+  width: 75rem;
+  height: 0.0625rem;
+  flex-shrink: 0;
+}
+
+.light-button {
+  display: inline-flex;
+  padding: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  background-color: var(--Purple, #9747FF);
+  transition: background-color 0.25s ease;
+
+  color: #FFF;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem; /* 125% */
+}
+
+.light-button:hover {
+  background: var(--Purple, #421e72);
+}
+
+.dark-button {
+  display: flex;
+  padding: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  border: 2px solid var(--Purple, #9747FF);
+  transition: color 0.25s ease, border 0.25s ease;
+
+  color: var(--Purple, #9747FF);
+  background-color: transparent;
+  text-align: right;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem; /* 125% */
+}
+
+.dark-button:hover {
+  text-decoration: none;
+  color: var(--Purple, #421e72);
+  border: 2px solid var(--Purple, #421e72);
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+    background: var(--Black, #0B061B);
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}
